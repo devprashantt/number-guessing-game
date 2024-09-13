@@ -1,0 +1,11 @@
+build
+coverage
+dist
+package.json
+package-lock.json
+node_modules
+.idea
+.vscode
+*.log
+*.log.*
+*.log-*

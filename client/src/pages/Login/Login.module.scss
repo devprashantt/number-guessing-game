@@ -1,0 +1,275 @@
+.main_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%),
+    linear-gradient(
+      243deg,
+      rgba(226, 224, 255, 0.48) 1.53%,
+      rgba(226, 224, 255, 0.48) 6.25%,
+      rgba(226, 224, 255, 0.48) 9.9%,
+      rgba(226, 224, 255, 0.48) 13.82%,
+      rgba(226, 224, 255, 0.48) 18.2%,
+      rgba(226, 224, 255, 0.48) 23.24%,
+      rgba(226, 224, 255, 0.48) 28.39%,
+      rgba(226, 224, 255, 0.48) 32.88%,
+      rgba(226, 224, 255, 0.48) 38.18%,
+      rgba(226, 224, 255, 0.48) 43.01%,
+      rgba(226, 224, 255, 0.48) 48.62%,
+      rgba(226, 224, 255, 0.48) 53.6%,
+      rgba(226, 224, 255, 0.48) 58.84%,
+      rgba(226, 224, 255, 0.48) 64.12%,
+      rgba(226, 224, 255, 0.48) 69.03%,
+      rgba(226, 224, 255, 0.48) 74.37%,
+      rgba(226, 224, 255, 0.48) 79.99%,
+      rgba(226, 224, 255, 0.48) 85.3%,
+      rgba(226, 224, 255, 0.48) 90.68%,
+      rgba(226, 224, 255, 0.48) 96.07%
+    );
+}
+
+.login_container {
+  display: flex;
+  width: 32rem;
+  padding: 5.2vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  background: var(--color-gray-10, #fff);
+
+  .login_sub_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+    align-self: stretch;
+
+    .login_header {
+      display: flex;
+      height: 4.8rem;
+      padding: var(--Padding-Navbar, 1.5rem);
+      justify-content: center;
+      align-items: center;
+      gap: 0.75rem;
+      align-self: stretch;
+      border-radius: 0.5rem;
+      background: rgba(226, 224, 255, 0.4);
+
+      h1 {
+        color: var(--primary-main, #3818d9);
+        text-align: center;
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.75rem;
+      }
+    }
+
+    .login_fields {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+      align-self: stretch;
+
+      .login_field {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0.5rem;
+        align-self: stretch;
+
+        label {
+          align-self: stretch;
+          color: var(--color-gray-90, #3f3f3f);
+          font-size: 0.875rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 1.25rem;
+        }
+
+        .password {
+          width: 100%;
+          display: flex;
+          position: relative;
+
+          input {
+            width: 100%;
+            display: flex;
+            height: 2.5rem;
+            padding: 1rem 1.25rem;
+            justify-content: center;
+            align-items: center;
+            gap: 1.25rem;
+            flex-shrink: 0;
+            align-self: stretch;
+            border-radius: 0.5rem;
+            border: 0.5px solid var(--primary-border, #a899f1);
+            background: var(--color-gray-10, #fff);
+            color: #3f3f3f;
+          }
+
+          .icon {
+            cursor: pointer;
+            display: flex;
+            position: absolute;
+            right: 16px;
+            top: 0;
+            bottom: 0;
+            align-items: center;
+
+            margin-top: auto;
+            margin-bottom: auto;
+          }
+        }
+
+        input {
+          width: 100%;
+          display: flex;
+          height: 2.5rem;
+          padding: 1rem 1.25rem;
+          justify-content: center;
+          align-items: center;
+          gap: 1.25rem;
+          flex-shrink: 0;
+          align-self: stretch;
+          border-radius: 0.5rem;
+          border: 0.5px solid var(--primary-border, #a899f1);
+          background: var(--color-gray-10, #fff);
+          color: #3f3f3f;
+        }
+      }
+    }
+
+    .login_options {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1.2rem;
+
+      .login_option_text {
+        height: 1.25rem;
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        p {
+          color: var(--color-gray-90, #3f3f3f);
+          font-size: 0.875rem;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 1.25rem;
+          width: 32%;
+        }
+
+        div {
+          width: 68%;
+          height: 0.03125rem;
+          background: #e7e7e7;
+        }
+      }
+
+      .login_option_container {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.625rem;
+        align-self: stretch;
+
+        .login_option {
+          cursor: pointer;
+          display: flex;
+          padding: 0.8rem 1.2rem;
+          justify-content: center;
+          align-items: center;
+          gap: 0.62rem;
+          flex: 1 0 0;
+          border-radius: 0.5rem;
+          background: rgba(197, 197, 197, 0.1);
+
+          &:hover {
+            background: rgba(197, 197, 197, 0.3);
+          }
+
+          p {
+            color: var(--color-gray-90, #3f3f3f);
+            font-size: 0.875rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.25rem;
+          }
+        }
+      }
+    }
+
+    .login_submit {
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      padding: 0.8rem;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      gap: 0.5rem;
+      align-self: stretch;
+      border-radius: 0.5rem;
+      background: var(--primary-main, #3818d9);
+      color: var(--Gray-100, #ececec);
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 500;
+
+      // hover
+      &:hover {
+        background: var(--primary-dark, #2c0ccd);
+      }
+    }
+
+    span {
+      align-self: stretch;
+      color: var(--color-gray-90, #3f3f3f);
+      font-size: 0.875rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1.25rem;
+      text-align: center;
+
+      a {
+        color: var(--Info-main, #3818d9);
+        font-family: Inter;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.25rem;
+        text-decoration-line: underline;
+      }
+    }
+  }
+}
+
+.loader {
+  border: 3px solid #fff;
+  border-top: 3px solid #3818d9;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  animation: spin 2s linear infinite;
+  position: absolute;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

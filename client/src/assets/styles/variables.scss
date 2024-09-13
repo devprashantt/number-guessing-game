@@ -1,0 +1,142 @@
+// colors/gray
+$gray-100: #ffffff;
+$gray-200: #cccccc;
+$gray-300: #d8d8d8;
+$gray-400: #c5c5c5;
+$gray-500: #b1b1b1;
+$gray-600: #9e9e9e;
+$gray-700: #7e7e7e;
+$gray-800: #5f5f5f;
+$gray-900: #3f3f3f;
+$gray-1000: #202020;
+
+// colors/primary
+$primary-100: #702dff;
+$primary-200: #5f2be2;
+$primary-300: #4e24c4;
+$primary-400: #3e1da6;
+$primary-500: #2e1678;
+$primary-600: #1f104a;
+$primary-700: #19102d;
+$primary-800: #0a052e;
+$primary-900: #050228;
+$primary-1000: #000014;
+
+// colors/essentials/red
+$red-100: #ba1717;
+$red-200: #a91414;
+$red-300: #961111;
+$red-400: #841e1e;
+$red-500: #731b1b;
+$red-600: #611818;
+$red-700: #501515;
+$red-800: #3e1212;
+$red-900: #2d0f0f;
+$red-1000: #1b0c0c;
+
+// colors/essentials/green
+$green-100: #037813;
+$green-200: #026a11;
+$green-300: #025c0f;
+$green-400: #014e0d;
+$green-500: #013f0b;
+$green-600: #01310a;
+$green-700: #012308;
+$green-800: #011506;
+$green-900: #010704;
+$green-1000: #000302;
+
+// colors/essentials/blue
+$blue-100: #006fd5;
+$blue-200: #005fc2;
+$blue-300: #004fae;
+$blue-400: #003f9b;
+$blue-500: #002f87;
+$blue-600: #002075;
+$blue-700: #001163;
+$blue-800: #000051;
+$blue-900: #000041;
+$blue-1000: #000030;
+
+// colors/essentials/yellow
+$yellow-100: #e9c400;
+$yellow-200: #d9b300;
+$yellow-300: #c9a200;
+$yellow-400: #b99200;
+$yellow-500: #a98200;
+$yellow-600: #997100;
+$yellow-700: #896100;
+$yellow-800: #785000;
+$yellow-900: #684000;
+$yellow-1000: #573000;
+
+// color/hover
+$hover-100: #f5f5f5;
+$hover-200: #e8e8e8;
+$hover-300: #d9d9d9;
+$hover-400: #c9c9c9;
+$hover-500: #b9b9b9;
+$hover-600: #a9a9a9;
+$hover-700: #999999;
+$hover-800: #888888;
+$hover-900: #787878;
+$hover-1000: #676767;
+
+// colors/btn
+$btn-primary-100: #3818d9;
+$btn-primary-200: #2f15c2;
+$btn-primary-300: #2611ab;
+$btn-primary-400: #1d0e94;
+$btn-primary-500: #140a7d;
+$btn-primary-600: #0b0666;
+$btn-primary-700: #07044f;
+$btn-primary-800: #04023a;
+$btn-primary-900: #020126;
+$btn-primary-1000: #000013;
+
+// shadow
+$shadow-100: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+$shadow-200: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+$shadow-300: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+$shadow-400: 0 0 40px 0 rgba(0, 0, 0, 0.1);
+$shadow-500: 0 0 50px 0 rgba(0, 0, 0, 0.1);
+$shadow-600: 0 0 60px 0 rgba(0, 0, 0, 0.1);
+$shadow-700: 0 0 70px 0 rgba(0, 0, 0, 0.1);
+$shadow-800: 0 0 80px 0 rgba(0, 0, 0, 0.1);
+$shadow-900: 0 0 90px 0 rgba(0, 0, 0, 0.1);
+$shadow-1000: 0 0 100px 0 rgba(0, 0, 0, 0.1);
+
+// border-radius
+$border-radius-none: 0;
+$border-radius-small: 4px;
+$border-radius-medium: 8px;
+$border-radius-large: 16px;
+$border-radius-xlarge: 24px;
+$border-radius-xxlarge: 32px;
+
+// spacing
+$spacing-100: 4px;
+$spacing-200: 8px;
+$spacing-300: 12px;
+$spacing-400: 16px;
+$spacing-500: 24px;
+$spacing-600: 32px;
+$spacing-700: 48px;
+$spacing-800: 64px;
+$spacing-900: 96px;
+$spacing-1000: 128px;
+
+// font-size
+$font-size-xxxsmall: 8px;
+$font-size-xxsmall: 10px;
+$font-size-small: 12px;
+$font-size-medium: 18px;
+$font-size-xmedium: 20px;
+$font-size-large: 24px;
+$font-size-xlarge: 32px;
+$font-size-xxlarge: 48px;
+$font-size-xxxlarge: 64px;
+
+// font family
+$font-family-primary: "Inter", sans-serif;
+// $font-family-primary: "Poppins";

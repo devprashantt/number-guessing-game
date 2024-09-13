@@ -1,0 +1,12 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="vuesax/linear/chart">
+<g id="chart">
+<path id="Vector" d="M2 14.6667H14" stroke="current-color" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="Group">
+<path id="Vector_2" d="M3.73332 5.58667H2.66667C2.3 5.58667 2 5.88667 2 6.25334V12C2 12.3667 2.3 12.6667 2.66667 12.6667H3.73332C4.09998 12.6667 4.39998 12.3667 4.39998 12V6.25334C4.39998 5.88667 4.09998 5.58667 3.73332 5.58667Z" stroke="current-color" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M8.53019 3.45996H7.46354C7.09688 3.45996 6.79688 3.75996 6.79688 4.12663V12C6.79688 12.3666 7.09688 12.6666 7.46354 12.6666H8.53019C8.89686 12.6666 9.19686 12.3666 9.19686 12V4.12663C9.19686 3.75996 8.89686 3.45996 8.53019 3.45996Z" stroke="current-color" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M13.3349 1.33325H12.2682C11.9016 1.33325 11.6016 1.63325 11.6016 1.99992V11.9999C11.6016 12.3666 11.9016 12.6666 12.2682 12.6666H13.3349C13.7015 12.6666 14.0015 12.3666 14.0015 11.9999V1.99992C14.0015 1.63325 13.7015 1.33325 13.3349 1.33325Z" stroke="current-color" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</svg>

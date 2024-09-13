@@ -1,0 +1,36 @@
+@import "./../assets/styles/variables.scss";
+@import "./../assets/styles/mixins.scss";
+
+main {
+  display: flex;
+  padding: 1rem;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%),
+    linear-gradient(
+      243deg,
+      rgba(226, 224, 255, 0.48) 1.53%,
+      rgba(226, 224, 255, 0.48) 6.25%,
+      rgba(226, 224, 255, 0.48) 9.9%,
+      rgba(226, 224, 255, 0.48) 13.82%,
+      rgba(226, 224, 255, 0.48) 18.2%,
+      rgba(226, 224, 255, 0.48) 23.24%,
+      rgba(226, 224, 255, 0.48) 28.39%,
+      rgba(226, 224, 255, 0.48) 32.88%,
+      rgba(226, 224, 255, 0.48) 38.18%,
+      rgba(226, 224, 255, 0.48) 43.01%,
+      rgba(226, 224, 255, 0.48) 48.62%,
+      rgba(226, 224, 255, 0.48) 53.6%,
+      rgba(226, 224, 255, 0.48) 58.84%,
+      rgba(226, 224, 255, 0.48) 64.12%,
+      rgba(226, 224, 255, 0.48) 69.03%,
+      rgba(226, 224, 255, 0.48) 74.37%,
+      rgba(226, 224, 255, 0.48) 79.99%,
+      rgba(226, 224, 255, 0.48) 85.3%,
+      rgba(226, 224, 255, 0.48) 90.68%,
+      rgba(226, 224, 255, 0.48) 96.07%
+    );
+    overflow: hidden;
+}

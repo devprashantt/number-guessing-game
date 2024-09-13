@@ -1,0 +1,51 @@
+version: '1.0.0'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: app
+    container_name: app
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - '$PORT:$PORT'
+    links:
+      - mysql
+      - redis
+    depends_on:
+      - mysql
+      - redis
+
+  mysql:
+    image: mysql:8.0.26
+    container_name: mysql
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - '$MYSQL_PORT:3306'
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - dbdata:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
+      MYSQL_DATABASE: $MYSQL_DATABASE
+      MYSQL_USER: $MYSQL_USER
+      MYSQL_PASSWORD: $MYSQL_PASSWORD
+
+  redis:
+    image: redis:7.2.3
+    container_name: redis
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - '$REDIS_PORT:6379'
+    command: redis-server --save 20 1 --loglevel warning --requirepass $REDIS_PASSWORD
+    volumes:
+      - cache:/data/cache
+
+volumes:
+  dbdata:
+  cache:
+    driver: local

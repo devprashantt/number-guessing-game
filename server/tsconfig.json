@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "rootDir": "./",
+    "outDir": "build",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "target": "es2018",
+    "moduleResolution": "node10",
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "strict": false,
+    "forceConsistentCasingInFileNames": false,
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "@models/*": ["src/db/models/*"],
+      "@daos/*": ["src/db/daos/*"],
+      "@routes/*": ["src/routes/*"],
+      "@services/*": ["src/services/*"],
+      "@utils/*": ["src/utils/*"],
+      "@middlewares/*": ["src/middlewares/*"],
+      "@helpers/*": ["src/helpers/*"],
+      "@controllers/*": ["src/controllers/*"]
+    }
+  },
+  "lib": ["es2015"],
+  "include": ["src//*.ts", "src//.js", "src/**/.cjs", "swc.config.ts"],
+  "exclude": ["node_modules", "build", "__tests", "coverage"]
+}
