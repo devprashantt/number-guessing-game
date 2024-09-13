@@ -23,19 +23,18 @@ logger.info(
 );
 
 config = {
+  dialectOptions: {
+    ssl: {
+      minVersion: 'TLSv1.2',
+      ca: fs.readFileSync(path.resolve(__dirname + '/../ssl/isrgrootx1.pem')),
+    },
+  },
   username: process.env.DB_USERNAME || 'root',
   password: process.env.DB_PASSWORD || 'password',
-  database: process.env.DB_NAME || 'stealth_ai',
+  database: process.env.DB_NAME || 'shram',
   host: process.env.DB_HOST || '127.0.0.1',
-  port: process.env.DB_PORT || 3306,
-  dialect: process.env.DB_DIALECT || 'mysql',
-  ssl:
-    process.env.TIDB_ENABLE_SSL === 'true'
-      ? {
-          minVersion: 'TLSv1.2',
-          ca: fs.readFileSync(dirname + `/../ssl/isrgrootx1.pem`),
-        }
-      : null,
+  port: process.env.DB_PORT || '3306',
+  dialect: 'mysql' as Dialect,
 };
 
 const sequelize = new Sequelize(
