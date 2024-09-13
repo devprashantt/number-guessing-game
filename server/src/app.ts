@@ -39,7 +39,7 @@ app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 app.use(multer().none());
 app.use(
   cors({
-    origin: ['http://localhost:5173'],
+    origin: ['http://localhost:5173', 'https://shram.vercel.app'],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   }),
 );
