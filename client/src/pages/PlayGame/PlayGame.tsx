@@ -120,7 +120,7 @@ const PlayGame = () => {
           );
 
           // if the score is higher than the current total
-          if (score) {
+          if (score > 0) {
             setShowConfetti(true);
           }
 
