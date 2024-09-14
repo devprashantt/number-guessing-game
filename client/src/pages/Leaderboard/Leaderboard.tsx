@@ -18,7 +18,7 @@ const Leaderboard = () => {
 
   const navigate = useNavigate();
 
-  const { getHighestScore, getLeaderboard } = useScore();
+  const { getHighestScore, getLeaderboard, loading } = useScore();
 
   const [leaderboard, setLeaderboard] = useState([]);
 
@@ -40,31 +40,35 @@ const Leaderboard = () => {
   return (
     <div className={styles.main}>
       <h1>Leaderboard</h1>
-      <div className={styles.leaderboard}>
-        {leaderboard.map(
-          (
-            userData: {
-              user_id: string;
-              total_score: number;
-              User: {
-                first_name: string;
-                primary_email: string;
-              };
-            },
-            index,
-          ) => (
-            <div key={index} className={styles.leaderboard_item}>
-              <div>
-                <span>{index + 1}.</span>
-                <span>
-                  {userData.User.first_name} ({userData.User.primary_email})
-                </span>
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <div className={styles.leaderboard}>
+          {leaderboard.map(
+            (
+              userData: {
+                user_id: string;
+                total_score: number;
+                User: {
+                  first_name: string;
+                  primary_email: string;
+                };
+              },
+              index,
+            ) => (
+              <div key={index} className={styles.leaderboard_item}>
+                <div>
+                  <span>{index + 1}.</span>
+                  <span>
+                    {userData.User.first_name} ({userData.User.primary_email})
+                  </span>
+                </div>
+                <div>{userData.total_score}</div>
               </div>
-              <div>{userData.total_score}</div>
-            </div>
-          ),
-        )}
-      </div>
+            ),
+          )}
+        </div>
+      )}
       <CustomButton
         onClick={() => {
           navigate("/");
