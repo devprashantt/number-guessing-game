@@ -14,7 +14,7 @@ This project is a simple game built with **React.js** for the frontend and **Nod
 
 ## Demo
 
-[[Play Game](https://shram.vercel.app/user/play_game)]
+[Play Game](https://shram.vercel.app/user/play_game)
 
 ## Tech Stack
 
