@@ -228,7 +228,7 @@ const PlayGame = () => {
                 onClick={handleGuess}
                 className={styles.guess_button}
               >
-                {`${loading ? "Checking..." : "Guess Number"}`}
+                {`${loading ? "Loading server..." : "Guess Number"}`}
               </CustomButton>
             </div>
           </div>
