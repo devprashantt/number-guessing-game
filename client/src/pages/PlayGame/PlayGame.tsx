@@ -50,7 +50,7 @@ const PlayGame = () => {
 
     // in between 1 to 5
     if (guessNumber < 1 || guessNumber > 50) {
-      setMessage("Please enter a number between 1 and 5!");
+      setMessage("Please enter a number between 1 and 50!");
       return;
     }
 
@@ -76,6 +76,8 @@ const PlayGame = () => {
     }
 
     setGuess("");
+    const input = document.querySelector("input");
+    input?.focus();
   };
   const handlePlayAgain = () => {
     setRandomNumber(generateRandomNumber());
@@ -117,12 +119,13 @@ const PlayGame = () => {
 
           // if the score is higher than the current total
           if (
-            highestScore.total_score.score + score >
+            parseInt(highestScore.total_score.score) + score >
             highestScore.total_score.score
           ) {
             setShowConfetti(true);
           }
 
+          setIsGameOver(true);
           fetchHighestScore();
         }
       },
@@ -164,6 +167,12 @@ const PlayGame = () => {
       fetchHighestScore();
     }
   }, [isGameOver]);
+
+  // bring focus on the input field when the component mounts
+  useEffect(() => {
+    const input = document.querySelector("input");
+    input?.focus();
+  }, []);
 
   return (
     <div className={styles.pg}>
@@ -222,13 +231,13 @@ const PlayGame = () => {
                 onClick={handleFinishGame}
                 className={styles.finish_game}
               >
-                Finish Game
+                {`${loading ? "Loading..." : "Finish Game"}`}
               </CustomButton>
               <CustomButton
                 onClick={handleGuess}
                 className={styles.guess_button}
               >
-                {`${loading ? "Loading server..." : "Guess Number"}`}
+                {`${loading ? "Loading..." : "Guess Number"}`}
               </CustomButton>
             </div>
           </div>
@@ -245,7 +254,9 @@ const PlayGame = () => {
         luck!
       </p>
       <p className={styles.warning}>
-        <strong>Note:</strong> The number is generated between 1 and 50
+        <strong>Note:</strong> The number is generated between 1 and 50, If you
+        guess the number correctly, you get 10 points, if you guess wrong, you
+        lose 1 point.
       </p>
       <p className={styles.logout} onClick={handleLogout}>
         {`Logout`}
