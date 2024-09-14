@@ -1,7 +1,6 @@
 .simple_input {
   display: flex;
-  width: 32.375rem;
-  height: 2.5rem;
+  height: 4rem;
   padding: 0.75rem 1.25rem;
   flex-direction: column;
   justify-content: center;
@@ -14,7 +13,7 @@
   overflow: hidden;
   color: var(--color-gray-50, #3f3f3f);
   text-overflow: ellipsis;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 500;
   line-height: 1rem;
@@ -22,29 +21,5 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   align-self: stretch;
-}
-
-.error_input {
-  display: flex;
-  width: 32.375rem;
-  height: 2.5rem;
-  padding: 0.75rem 1.25rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1.25rem;
-  border-radius: 0.5rem;
-  border: 0.5px solid var(--Danger-main, #ba1717);
-  background: var(--color-gray-10, #fff);
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  align-self: stretch;
-  overflow: hidden;
-  color: var(--color-gray-50, #363636);
-  text-overflow: ellipsis;
-  font-size: 0.75rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1rem;
+  text-align: center;
 }

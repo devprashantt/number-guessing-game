@@ -15,5 +15,6 @@ router.get(
   scoreController.getLeaderboard,
 );
 router.post('/', AuthToken.verifyToken, scoreController.createScore);
+router.get('/all', AuthToken.verifyToken, scoreController.getAllScores);
 
 export default router;

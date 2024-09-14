@@ -37,7 +37,7 @@ const PlayGame = () => {
 
   // function to generate a random number between 1 and 100
   function generateRandomNumber() {
-    return Math.floor(Math.random() * 5) + 1;
+    return Math.floor(Math.random() * 50) + 1;
   }
 
   const handleGuess = () => {
@@ -49,7 +49,7 @@ const PlayGame = () => {
     }
 
     // in between 1 to 5
-    if (guessNumber < 1 || guessNumber > 5) {
+    if (guessNumber < 1 || guessNumber > 50) {
       setMessage("Please enter a number between 1 and 5!");
       return;
     }
@@ -68,15 +68,11 @@ const PlayGame = () => {
       });
       setIsGameOver(true);
     } else if (guessNumber < randomNumber) {
-      setMessage(`Too low! Try again. The number is ${randomNumber}`);
+      setMessage(`TO LOW! Try again.`);
       setScore((prevScore) => prevScore - 1);
-      // reset random
-      setRandomNumber(generateRandomNumber());
     } else {
-      setMessage(`Too high! Try again. The number is ${randomNumber}`);
+      setMessage(`TOO HIGH! Try again.`);
       setScore((prevScore) => prevScore - 1);
-      // reset random
-      setRandomNumber(generateRandomNumber());
     }
 
     setGuess("");
@@ -120,7 +116,10 @@ const PlayGame = () => {
           );
 
           // if the score is higher than the current total
-          if (score > 0) {
+          if (
+            highestScore.total_score.score + score >
+            highestScore.total_score.score
+          ) {
             setShowConfetti(true);
           }
 
@@ -168,7 +167,17 @@ const PlayGame = () => {
 
   return (
     <div className={styles.pg}>
-      <h1>Guess the Number!</h1>
+      <h1>
+        {`WELCOME, ${APP_USER?.first_name} ${APP_USER?.last_name}`}
+        <span
+          className={styles.ps}
+          onClick={() => {
+            navigate("/user/scores");
+          }}
+        >
+          Previous Scores
+        </span>
+      </h1>
       {showConfetti && (
         <Confetti
           width={window.innerWidth}
@@ -178,9 +187,6 @@ const PlayGame = () => {
       )}
       <div className={styles.scores}>
         <p className={styles.score1}>Your Score: {score}</p>
-        <p className={styles.score2}>
-          High Score: {highestScore?.highest_score?.score ?? 0}
-        </p>
         <p className={styles.score3}>
           Total Score: {highestScore?.total_score?.score ?? 0}
         </p>
@@ -208,8 +214,8 @@ const PlayGame = () => {
             <SimpleInput
               type="text"
               value={guess}
-              onChange={(e) => setGuess(e.target.value)}
-              placeholder="Enter a number between 1-10"
+              onChange={(e: any) => setGuess(e.target.value)}
+              placeholder="Enter a number between 1-50"
             />
             <div className={styles.game_over}>
               <CustomButton
@@ -239,7 +245,7 @@ const PlayGame = () => {
         luck!
       </p>
       <p className={styles.warning}>
-        <strong>Note:</strong> The number is generated between 1 and 5
+        <strong>Note:</strong> The number is generated between 1 and 50
       </p>
       <p className={styles.logout} onClick={handleLogout}>
         {`Logout`}

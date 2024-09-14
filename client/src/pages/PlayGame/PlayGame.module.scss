@@ -6,6 +6,14 @@
   gap: 2rem;
   width: 40%;
 
+  h1 {
+    span {
+      color: var(--disc-green, #4a3aff);
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
   .scores {
     display: flex;
     justify-content: space-between;
@@ -76,7 +84,7 @@
 
     .actions {
       display: flex;
-      justify-content: space-between;
+      justify-content:center;
       flex-direction: column;
       align-items: center;
       gap: 1rem;

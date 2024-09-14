@@ -1,5 +1,5 @@
 // pages
-import { PlayGame, Leaderboard } from "@pages";
+import { PlayGame, Leaderboard, PastScores } from "@pages";
 
 const USER_ROUTES = [
   {
@@ -19,6 +19,14 @@ const USER_ROUTES = [
         icon: null,
         icon_inactive: null,
         component: Leaderboard,
+        isSidebarMenu: false,
+      },
+      {
+        path: "/user/scores",
+        name: "scores",
+        icon: null,
+        icon_inactive: null,
+        component: PastScores,
         isSidebarMenu: false,
       },
     ],

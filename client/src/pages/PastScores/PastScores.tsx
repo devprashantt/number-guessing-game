@@ -10,45 +10,45 @@ import { useScore } from "../../apis";
 
 import { useLocalStorage } from "../../hooks";
 
-import styles from "./Leaderboard.module.scss";
+import styles from "./PastScores.module.scss";
 
-const Leaderboard = () => {
+const PastScores = () => {
   const DISPATCH = useDispatch();
   const APP_USER = useSelector((state) => state[SLICE_NAMES.USER]);
 
   const navigate = useNavigate();
 
-  const { getHighestScore, getLeaderboard, loading } = useScore();
+  const { getHighestScore, getLeaderboard, loading, getAllScores } = useScore();
 
-  const [leaderboard, setLeaderboard] = useState([]);
+  const [scores, setScores] = useState([]);
 
-  const fetchLeaderboard = async () => {
-    getLeaderboard((res, error) => {
+  const fetchAllScores = async () => {
+    getAllScores((res, error) => {
       if (error) {
         console.log(error);
         return;
       }
 
-      setLeaderboard(res?.data || []);
+      setScores(res?.data || []);
     });
   };
 
   useEffect(() => {
-    fetchLeaderboard();
+    fetchAllScores();
   }, []);
 
   return (
     <div className={styles.main}>
-      <h1>Leaderboard</h1>
+      <h1>User Scores</h1>
       {loading ? (
         <p className={styles.loading}>Loading...</p>
       ) : (
         <div className={styles.leaderboard}>
-          {leaderboard.map(
+          {scores?.map(
             (
-              userData: {
+              res: {
                 user_id: string;
-                total_score: number;
+                score: number;
                 User: {
                   first_name: string;
                   primary_email: string;
@@ -57,13 +57,14 @@ const Leaderboard = () => {
               index,
             ) => (
               <div key={index} className={styles.leaderboard_item}>
-                <div>
-                  <span>{index + 1}.</span>
-                  <span>
-                    {userData.User.first_name} ({userData.User.primary_email})
-                  </span>
-                </div>
-                <div>{userData.total_score}</div>
+                <p>{res.User.first_name}</p>
+                <p>
+                  {
+                    // format date
+                    new Date(res?.created_at).toLocaleDateString()
+                  }
+                </p>
+                <p>{res.score}</p>
               </div>
             ),
           )}
@@ -80,4 +81,4 @@ const Leaderboard = () => {
   );
 };
 
-export default Leaderboard;
+export default PastScores;

@@ -92,4 +92,25 @@ export default class UserDao extends SuperDao {
       return [null, error];
     }
   };
+
+  getAllScores = async ({ user_id }) => {
+    try {
+      const scores = await this.findAllGeneric({
+        where: {
+          user_id,
+        },
+        order: [['score', 'DESC']],
+        include: [
+          {
+            model: db.User,
+            attributes: ['first_name', 'primary_email'],
+          },
+        ],
+      });
+
+      return [scores, null];
+    } catch (error) {
+      return [null, error];
+    }
+  };
 }

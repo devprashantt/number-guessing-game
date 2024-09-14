@@ -128,4 +128,27 @@ export default class ScoreController {
       return internalServerError(res, `Error getting scores: ${error}`);
     }
   };
+
+  getAllScores = async (req: Request, res: Response) => {
+    try {
+      // @ts-ignore
+      const { user_id } = req.user;
+
+      const [scores, scoresError] = await this.scoreDao.getAllScores({
+        user_id,
+      });
+      if (scoresError) {
+        logger.error('Error occurred while retrieving scores', scoresError);
+        return internalServerError(
+          res,
+          'An error occurred while retrieving scores',
+        );
+      }
+
+      return successResponse(res, scores, `Scores retrieved successfully`);
+    } catch (error) {
+      logger.error('Error getting scores', error);
+      return internalServerError(res, `Error getting scores: ${error}`);
+    }
+  };
 }
