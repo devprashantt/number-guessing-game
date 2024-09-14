@@ -1,4 +1,4 @@
-# Simple React Game with Node.js Backend
+# Number Guessing Game 
 
 This project is a simple game built with **React.js** for the frontend and **Node.js/Express** with **Sequelize ORM** for the backend. The game allows users to play, track scores, and save their progress with features like user authentication, real-time score tracking, and persistent storage of high scores.
 
